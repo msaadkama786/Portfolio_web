@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohd Saad Kamal | Data Scientist & ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F5F8;--surface:#fff;--ink:#13203A;--muted:#55627A;--line:#D3DCE6;--accent:#2450E6;--accent-ink:#fff;--warm:#E8920C;--grid:rgba(36,80,230,.07);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101826;--surface:#17233A;--ink:#E8EEF8;--muted:#9AA9C2;--line:#2A3956;--accent:#7C9BFF;--accent-ink:#101826;--warm:#F5B04A;--grid:rgba(124,155,255,.08)}}
+:root[data-theme="dark"]{--bg:#101826;--surface:#17233A;--ink:#E8EEF8;--muted:#9AA9C2;--line:#2A3956;--accent:#7C9BFF;--accent-ink:#101826;--warm:#F5B04A;--grid:rgba(124,155,255,.08)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,sans-serif;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:84px 0 24px}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:28px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;text-decoration:none;white-space:nowrap}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.links a{padding:8px 12px;border-radius:8px;text-decoration:none;font-size:.95rem;color:var(--muted);white-space:nowrap}
+.links a:hover,.links a.on{color:var(--ink);background:var(--surface)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 10px;cursor:pointer;font:inherit;font-size:.9rem}
+/* hero */
+.hero{padding-top:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800}
+.role{margin:18px 0 8px;font-family:"Bricolage Grotesque",sans-serif;font-size:1.35rem;font-weight:500;color:var(--accent);min-height:1.7em}
+.hero p.lead{color:var(--muted);max-width:52ch;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink);transition:transform .15s}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.plot{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
+.plot svg{width:100%;height:auto;display:block}
+.plot figcaption{font-size:.85rem;color:var(--muted);padding:6px 6px 0}
+.dot{fill:var(--accent);opacity:.85}.res{stroke:var(--warm);stroke-width:1.2;opacity:0;animation:show .6s 1.9s forwards}
+.fit{stroke:var(--warm);stroke-width:3;fill:none;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s .3s ease-out forwards}
+.ax{stroke:var(--line);stroke-width:1.5}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes show{to{opacity:.8}}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.stat b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem}
+.stat span{font-size:.88rem;color:var(--muted)}
+/* profile */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:1.25rem;margin-bottom:12px}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+.tl li{position:relative;margin-bottom:20px}
+.tl li::before{content:"";position:absolute;left:-25px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tl b{display:block}.tl small{color:var(--muted);display:block;margin-bottom:4px}
+.tl p{margin:0;font-size:.97rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.9rem;background:var(--bg)}
+.skillgrp+.skillgrp{margin-top:16px}.skillgrp h4{margin:0 0 8px;font-size:.95rem;color:var(--muted);font-weight:500}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:8px 18px}dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer;font:inherit;font-size:.95rem}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.proj{display:flex;flex-direction:column;gap:10px}
+.proj h3{font-size:1.2rem}.proj p{margin:0;color:var(--muted);font-size:.97rem}
+.proj .tag{font-size:.85rem;font-weight:500;color:var(--accent)}
+.proj .chips{margin-top:auto}
+.proj[hidden]{display:none}
+.plink{align-self:flex-start;font-weight:500;color:var(--accent);text-decoration:none;border-bottom:2px solid var(--accent)}
+.plink:hover{color:var(--ink);border-color:var(--ink)}
+/* reviews */
+.rev{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.form{display:grid;gap:14px}
+.form label.f{display:grid;gap:6px;font-weight:500;font-size:.95rem}
+.form input[type=text],.form textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.form textarea{min-height:120px;resize:vertical}
+.form input[type=text]:focus,.form textarea:focus{border-color:var(--accent)}
+.stars{display:inline-flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px;border:0;padding:0;margin:0}
+.stars legend{font-weight:500;font-size:.95rem;margin-bottom:6px;padding:0;float:left;width:100%}
+.stars input{position:absolute;opacity:0;pointer-events:none}
+.stars label{font-size:2.1rem;line-height:1;cursor:pointer;color:var(--line);padding:0 2px}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--warm)}
+.stars input:focus-visible+label{outline:3px solid var(--warm);outline-offset:2px;border-radius:6px}
+.msg{min-height:1.4em;font-size:.95rem;color:var(--muted)}
+.msg.err{color:#C0392B}
+.quote{margin:0 0 14px;padding:16px 18px;border-left:4px solid var(--warm);background:var(--bg);border-radius:0 10px 10px 0}
+.quote p{margin:6px 0 8px}.quote footer{padding:0;font-size:.9rem}
+.quote .st{color:var(--warm);letter-spacing:2px}
+@media(max-width:800px){.rev{grid-template-columns:1fr}}
+.metric{align-self:flex-start;background:var(--warm);color:#1b1200;border-radius:8px;padding:2px 10px;font-weight:500;font-size:.9rem}
+/* family */
+.note{color:var(--muted);margin:-12px 0 22px;max-width:60ch}
+.fam{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.fam .card b{display:block;margin-bottom:2px}.fam .card span{color:var(--muted)}
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.contact a.card{text-decoration:none;display:block}.contact a.card:hover{border-color:var(--accent)}
+.contact small{color:var(--muted);display:block}.contact b{overflow-wrap:anywhere}
+footer{padding:48px 0 40px;color:var(--muted);font-size:.9rem}
+@media(max-width:800px){.hero,.cols{grid-template-columns:1fr}.logo span{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fit{animation:none;stroke-dashoffset:0}.res{animation:none;opacity:.8}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">MSK<span> · Saad Kamal</span></a>
+<div class="links"><a href="#home">Home</a><a href="#profile">Profile</a><a href="#projects">Projects</a><a href="#family">Family</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+<button id="theme" aria-label="Switch light or dark theme">Theme</button>
+</nav></div></header>
+
+<main class="wrap">
+<section id="home" class="hero" style="padding-top:56px">
+<div>
+<h1>Mohd Saad Kamal</h1>
+<div class="role" id="role" aria-live="off">Data Scientist</div>
+<p class="lead">I turn messy data into models and dashboards people can act on. Python, SQL, machine learning, NLP and FastAPI, based in Delhi NCR.</p>
+<div class="btns"><a class="btn pri" href="#projects">See my projects</a><a class="btn" href="https://github.com/msaadkama786" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/mohd-saad-kamal-81a68621a" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<figure class="plot" style="margin:0">
+<svg id="plot" viewBox="0 0 400 300" role="img" aria-label="Scatter plot with a fitted regression line"><line class="ax" x1="30" y1="270" x2="380" y2="270"/><line class="ax" x1="30" y1="270" x2="30" y2="20"/></svg>
+<figcaption>Illustration: a regression line fitting noisy data.</figcaption>
+</figure>
+<div class="stats" style="grid-column:1/-1">
+<div class="stat"><b>0.93 R²</b><span>Random Forest, restaurant ratings</span></div>
+<div class="stat"><b>6 projects</b><span>ML, NLP and BI dashboards</span></div>
+<div class="stat"><b>MBA 2026</b><span>plus B.Tech 2022</span></div>
+</div>
+</section>
+
+<section id="profile">
+<h2>Profile</h2>
+<div class="cols">
+<div class="card"><h3>About me</h3>
+<p style="margin-top:0">Data science and AI professional with hands-on experience in Python, SQL, statistics, exploratory data analysis, machine learning, NLP, deep learning, FastAPI and generative AI. I cover data preprocessing, feature engineering, model development, evaluation and deployment.</p>
+<p>I build practical projects in predictive analytics, NLP, mental-health prediction and ML APIs, with a focus on data-driven, AI-powered solutions.</p>
+<h3 style="margin-top:22px">Details</h3>
+<dl><dt>Name</dt><dd>Mohd Saad Kamal</dd><dt>Location</dt><dd>Delhi NCR, India</dd><dt>Email</dt><dd><a href="mailto:saadkamal869@gmail.com">saadkamal869@gmail.com</a></dd><dt>Phone</dt><dd><a href="tel:+916398717266">+91 63987 17266</a></dd></dl>
+</div>
+<div class="card"><h3>Experience</h3>
+<ul class="tl">
+<li><b>Data Annotator (Freelance), AIBC Global</b><small>Gurugram · Jan 2025 – Present</small><p>Annotated text and multimodal data for AI training, and reviewed LLM responses for accuracy, relevance, coherence and factual consistency.</p></li>
+<li><b>Data Analyst Intern, Acmegrade Solutions</b><small>Sep 2025 – Feb 2026</small><p>Cleaned and analyzed datasets with SQL, Excel, Python and Power BI, and built dashboards for business decisions.</p></li>
+<li><b>Travel Assistant / Sales Executive, Shiza Travels</b><small>Bareilly · Mar 2023 – Present</small><p>Handled domestic and international bookings, coordinated with travel partners and met sales targets.</p></li>
+</ul></div>
+<div class="card"><h3>Skills</h3>
+<div class="skillgrp"><h4>Data and ML</h4><ul class="chips"><li>Python</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>XGBoost</li><li>Random Forest</li><li>SVM</li><li>KNN</li><li>Clustering</li><li>TensorFlow/Keras</li></ul></div>
+<div class="skillgrp"><h4>NLP and GenAI</h4><ul class="chips"><li>TF-IDF</li><li>Sentiment classification</li><li>LLMs</li><li>Prompt engineering</li><li>RAG</li><li>Embeddings</li><li>Vector databases</li><li>AI agents</li></ul></div>
+<div class="skillgrp"><h4>Visualization and deployment</h4><ul class="chips"><li>Power BI</li><li>Excel</li><li>Matplotlib</li><li>Seaborn</li><li>FastAPI</li><li>Streamlit</li><li>Git/GitHub</li></ul></div>
+</div>
+<div class="card"><h3>Education and certifications</h3>
+<ul class="tl">
+<li><b>MBA, 2026</b><small>Dr. A. P. J. Abdul Kalam Technical University, Lucknow</small></li>
+<li><b>Full Stack Data Analyst, 2023 – 2024</b><small>Naresh i Technologies, Hyderabad</small></li>
+<li><b>B.Tech, 2022</b><small>MJP Rohilkhand University, Bareilly</small></li>
+</ul>
+<ul class="chips"><li>Machine Learning</li><li>Data Science</li><li>Deep Learning</li><li>Generative AI</li><li>Python / SQL</li><li>Data Analyst</li><li>Management (Google, Coursera)</li></ul>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="filters" role="group" aria-label="Filter projects">
+<button data-f="all" aria-pressed="true">All</button><button data-f="ml" aria-pressed="false">ML and NLP</button><button data-f="bi" aria-pressed="false">Dashboards</button>
+</div>
+<div class="grid" id="grid">
+<article class="card proj" data-c="ml"><span class="tag">Machine learning + FastAPI</span><h3>Mental Health Score Prediction</h3><p>Predicts mental-health scores from student social-media and lifestyle data. Includes cleaning, categorical encoding, EDA, regression evaluation, and a saved model served through a FastAPI REST API with a frontend for inputs and predictions.</p><ul class="chips"><li>Python</li><li>FastAPI</li><li>Regression</li></ul><a class="plink" href="https://github.com/msaadkama786" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card proj" data-c="ml"><span class="tag">Machine learning + Streamlit</span><h3>Restaurant Rating Prediction</h3><p>EDA of how votes, price range, cost and location relate to ratings. Compared Linear Regression, Decision Tree and Random Forest, then shipped an interactive Streamlit app.</p><span class="metric">≈ 0.93 R² (Random Forest)</span><ul class="chips"><li>Scikit-learn</li><li>Streamlit</li></ul><a class="plink" href="https://github.com/msaadkama786" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card proj" data-c="ml"><span class="tag">NLP</span><h3>IMDB Text Classification</h3><p>Classifies movie reviews using TF-IDF features. Compared Naive Bayes, Logistic Regression and SVM on accuracy and F1-score.</p><ul class="chips"><li>TF-IDF</li><li>SVM</li><li>NLP</li></ul><a class="plink" href="https://github.com/msaadkama786" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card proj" data-c="bi"><span class="tag">Excel, SQL, Power BI</span><h3>Sales Performance Dashboard</h3><p>Interactive dashboard for sales, profit, customer and regional performance, with KPIs and trend analysis for business decisions.</p><ul class="chips"><li>Power BI</li><li>SQL</li><li>Excel</li></ul><a class="plink" href="https://github.com/msaadkama786/power-bi-sales-Dashboard" target="_blank" rel="noopener">View repository</a></article>
+<article class="card proj" data-c="bi"><span class="tag">Excel, SQL, Power BI</span><h3>HR Analytics Dashboard</h3><p>Analyzes attrition, performance, job satisfaction and workforce demographics to support retention and workforce planning.</p><ul class="chips"><li>Power BI</li><li>SQL</li><li>Excel</li></ul><a class="plink" href="https://github.com/msaadkama786/HR_Analytics_Dashboard" target="_blank" rel="noopener">View repository</a></article>
+<article class="card proj" data-c="bi"><span class="tag">Excel, SQL, Power BI</span><h3>Financial Performance Dashboard</h3><p>Tracks revenue, expenses, profit margins and budget performance, with automated reporting and KPI visuals for financial planning.</p><ul class="chips"><li>Power BI</li><li>SQL</li><li>Excel</li></ul><a class="plink" href="https://github.com/msaadkama786" target="_blank" rel="noopener">View on GitHub</a></article>
+</div>
+<p style="margin-top:22px"><a class="btn" href="https://github.com/msaadkama786" target="_blank" rel="noopener">More on GitHub</a></p>
+</section>
+
+<section id="family">
+<h2>Family details</h2>
+<p class="note">Edit these entries in the HTML to add your own details before you share the site publicly.</p>
+<div class="fam">
+<div class="card"><b>Father</b><span>Add name and occupation</span></div>
+<div class="card"><b>Mother</b><span>Add name and occupation</span></div>
+<div class="card"><b>Siblings</b><span>Add names</span></div>
+<div class="card"><b>Hometown</b><span>Add your hometown</span></div>
+</div>
+</section>
+
+<section id="reviews">
+<h2>Reviews and feedback</h2>
+<div class="rev">
+<form class="card form" id="fb" novalidate>
+<h3>Leave feedback</h3>
+<fieldset class="stars" id="stars"><legend>Your rating</legend>
+<input type="radio" name="rate" id="r5" value="5"><label for="r5" title="5 stars"><span aria-hidden="true">★</span><span class="sr" style="position:absolute;left:-9999px">5 stars</span></label>
+<input type="radio" name="rate" id="r4" value="4"><label for="r4" title="4 stars"><span aria-hidden="true">★</span><span class="sr" style="position:absolute;left:-9999px">4 stars</span></label>
+<input type="radio" name="rate" id="r3" value="3"><label for="r3" title="3 stars"><span aria-hidden="true">★</span><span class="sr" style="position:absolute;left:-9999px">3 stars</span></label>
+<input type="radio" name="rate" id="r2" value="2"><label for="r2" title="2 stars"><span aria-hidden="true">★</span><span class="sr" style="position:absolute;left:-9999px">2 stars</span></label>
+<input type="radio" name="rate" id="r1" value="1"><label for="r1" title="1 star"><span aria-hidden="true">★</span><span class="sr" style="position:absolute;left:-9999px">1 star</span></label>
+</fieldset>
+<label class="f" for="fn">Your name<input type="text" id="fn" autocomplete="name"></label>
+<label class="f" for="fm">Your feedback<textarea id="fm" required></textarea></label>
+<button class="btn pri" type="submit" style="cursor:pointer;font:inherit;font-weight:500">Send feedback</button>
+<div class="msg" id="fmsg" role="status"></div>
+</form>
+<div class="card"><h3>What people say</h3><div id="quotes"></div></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+<a class="card" href="mailto:saadkamal869@gmail.com"><small>Email</small><b>saadkamal869@gmail.com</b></a>
+<a class="card" href="tel:+916398717266"><small>Phone</small><b>+91 63987 17266</b></a>
+<a class="card" href="https://www.linkedin.com/in/mohd-saad-kamal-81a68621a" target="_blank" rel="noopener"><small>LinkedIn</small><b>mohd-saad-kamal</b></a>
+<a class="card" href="https://github.com/msaadkama786" target="_blank" rel="noopener"><small>GitHub</small><b>msaadkama786</b></a>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> Mohd Saad Kamal</div></footer>
+
+<script>
+// scatter plot with fitted line
+(function(){var s=document.getElementById('plot'),ns='http://www.w3.org/2000/svg',seed=7;
+function r(){seed=(seed*9301+49297)%233280;return seed/233280}
+function m(t,a){var e=document.createElementNS(ns,t);for(var k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e}
+var x0=30,y0=270,w=350,h=250;
+for(var i=0;i<26;i++){var u=.04+i/27*.92,v=.12+u*.72+(r()-.5)*.3;v=Math.max(.04,Math.min(.96,v));
+var px=x0+u*w,py=y0-v*h,fy=y0-(.12+u*.72)*h;
+m('line',{x1:px,y1:py,x2:px,y2:fy,'class':'res'});m('circle',{cx:px,cy:py,r:4.5,'class':'dot'})}
+m('path',{d:'M'+x0+' '+(y0-.12*h)+' L'+(x0+w)+' '+(y0-.84*h),'class':'fit'})})();
+// rotating role
+(function(){var roles=['Data Scientist','Data Analyst','ML Engineer','AI Engineer'],i=0,el=document.getElementById('role');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+setInterval(function(){i=(i+1)%roles.length;el.textContent=roles[i]},2400)})();
+// project filter
+document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.querySelectorAll('.proj').forEach(function(p){p.hidden=!(b.dataset.f==='all'||p.dataset.c===b.dataset.f)})})});
+// reviews shown on the site: add approved reviews here, e.g. {name:'Name',role:'Role',stars:5,text:'Review text'}
+var REVIEWS=[];
+(function(){var q=document.getElementById('quotes');
+if(!REVIEWS.length){var p=document.createElement('p');p.id='noRev';p.style.color='var(--muted)';p.style.margin='0';p.textContent='No reviews yet. Send the first one using the form.';q.appendChild(p);return}
+REVIEWS.forEach(function(r){var f=document.createElement('blockquote');f.className='quote';
+var s=document.createElement('div');s.className='st';s.textContent='\u2605'.repeat(r.stars||5);
+var t=document.createElement('p');t.textContent=r.text;
+var n=document.createElement('footer');n.textContent=r.name+(r.role?', '+r.role:'');
+f.appendChild(s);f.appendChild(t);f.appendChild(n);q.appendChild(f)})})();
+// feedback form sends an email to Saad
+document.getElementById('fb').addEventListener('submit',function(e){e.preventDefault();
+var m=document.getElementById('fm'),msg=document.getElementById('fmsg'),n=document.getElementById('fn').value.trim(),
+c=document.querySelector('input[name=rate]:checked'),rate=c?c.value:'not rated';
+msg.className='msg';
+if(!m.value.trim()){msg.className='msg err';msg.textContent='Write your feedback before sending.';m.focus();return}
+if(window.__rdb){var btn=e.submitter;if(btn)btn.disabled=true;
+window.__rdb.collection('reviews').add({name:n||'Anonymous',rating:c?+c.value:0,text:m.value.trim().slice(0,1000),approved:false,createdAt:Date.now()}).then(function(){msg.textContent='Thank you. Your review was saved and will appear after approval.';m.value='';document.getElementById('fn').value=''}).catch(function(){window.__rdb=null;msg.className='msg err';msg.textContent='Saving here is not available to you. Press Send feedback again to send it by email instead.'}).finally(function(){if(btn)btn.disabled=false});return}
+var body='Name: '+(n||'Anonymous')+'\nRating: '+rate+(c?' / 5':'')+'\n\n'+m.value.trim();
+location.href='mailto:saadkamal869@gmail.com?subject='+encodeURIComponent('Portfolio feedback ('+rate+(c?'/5':'')+')')+'&body='+encodeURIComponent(body);
+msg.textContent='Your email app should open with the feedback ready to send. If nothing opens, email saadkamal869@gmail.com.'});
+// shared review database (db capability); the email form above is the fallback
+(function(){if(!window.claude||!claude.use)return;
+var q=document.getElementById('quotes'),box=document.createElement('div');q.parentNode.appendChild(box);
+function mk(r,own){var f=document.createElement('blockquote');f.className='quote';
+var s=document.createElement('div');s.className='st';s.textContent='\u2605'.repeat(Math.max(0,Math.min(5,(r.rating|0))));
+var t=document.createElement('p');t.textContent=String(r.text||'');
+var n=document.createElement('footer');n.textContent=String(r.name||'Anonymous')+(own&&!r.approved?' (pending approval)':'');
+f.appendChild(s);f.appendChild(t);f.appendChild(n);return f}
+function btn(label,fn){var b=document.createElement('button');b.type='button';b.textContent=label;b.style.cssText='font:inherit;font-size:.85rem;padding:4px 12px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer';b.addEventListener('click',function(){b.disabled=true;fn().catch(function(){b.disabled=false})});return b}
+Promise.all([claude.use('db'),claude.use('user')]).then(async function(a){
+var db=a[0],user=a[1];if(!db)return;
+var owner=user?await user.isOwner():false,w=user?await user.can('data.write'):null;
+if(w!==false)window.__rdb=db;
+db.collection('reviews').onSnapshot(function(snap){
+box.textContent='';var shown=0;
+snap.docs.map(function(d){return{id:d.id,r:d.data()||{}}}).sort(function(x,y){return(y.r.createdAt||0)-(x.r.createdAt||0)}).forEach(function(o){
+if(!o.r.approved&&!owner)return;
+if(o.r.approved)shown++;
+var el=mk(o.r,owner);
+if(owner){var bar=document.createElement('div');bar.style.cssText='display:flex;gap:8px;margin-top:8px';
+if(!o.r.approved)bar.appendChild(btn('Approve',function(){return db.doc('reviews/'+o.id).update({approved:true})}));
+bar.appendChild(btn('Delete',function(){return db.doc('reviews/'+o.id).delete()}));el.appendChild(bar)}
+box.appendChild(el)});
+var np=document.getElementById('noRev');if(np)np.hidden=shown>0},function(){})
+}).catch(function(){})})();
+// theme toggle (no storage needed)
+document.getElementById('theme').addEventListener('click',function(){var d=document.documentElement,
+cur=d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');d.dataset.theme=cur==='dark'?'light':'dark'});
+// active nav link
+var ls=document.querySelectorAll('.links a');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('section').forEach(function(s){io.observe(s)});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
